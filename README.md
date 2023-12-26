@@ -25,8 +25,8 @@
 
 ## Events
 
-December 5-7, 2023. The Almond Conference. Poster presentation of **"Volumetric Measurement for Yield Monitoring of Almond Trees"**.
-December 6-8, 2022. The Almond Conference. Poster presentation of **"Volumetric Measurement for Yield Monitoring of Almond Trees"**.
+* December 5-7, 2023. The Almond Conference. Poster presentation of **"Volumetric Measurement for Yield Monitoring of Almond Trees"**.
+* December 6-8, 2022. The Almond Conference. Poster presentation of **"Volumetric Measurement for Yield Monitoring of Almond Trees"**.
 
 ## Contact
 
