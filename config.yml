@@ -12,7 +12,10 @@ menu:
     main:
         - name: Papers
           url: https://scholar.google.com/citations?user=IKH-S98AAAAJ
-          weight: 5 
+          weight: 5
+        - name: News
+          url: news/
+          weight: 1 
         # - name: Papers0
           # url: papers/
           # weight: 2
@@ -30,7 +33,7 @@ params:
     description: "I am Juan Villacres. Welcome to my personal site. Let's get in touch."
     author: Juan Villacres
     # googleAnalyticsID: "G-XXXXX"
-    DateFormat: "December 2024"
+    DateFormat: "January 2, 2006"
     defaultTheme: light
     hideFooter: false
     disableThemeToggle: true
@@ -55,21 +58,25 @@ params:
           title: Juan Villacres
           subtitle: "Welcome to my personal site. Let's get in touch! I am passionate about conducting research in automation and artificial intelligence for agricultural applications. In my free time, I enjoy designing origami."
           imageUrl: "picture.jpeg"
-          imageWidth: 160
-          imageHeight: 160
+          imageWidth: 140 # 117
+          imageHeight: 192 # 160
           buttons:
+            - name: News
+              url: news/
             - name: Papers
               url: papers/
-            - name: Courses
-              url: courses/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
-            # - name: Tags
-              # url: tags/
+            - name: Datasets
+              url: datasets/
+            - name: Photos
+              url: photos/
+            # - name: Data
+              # url: data/
+            # - name: Books
+              # url: books/
             # - name: Archive
               # url: archive/
+            
+            
             # - name: Blog
               # url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
 
