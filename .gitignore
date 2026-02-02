@@ -1,4 +1,6 @@
 # Hugo build artifacts
 public/
 resources/
+.DS_Store
+**/.DS_Store
 .hugo_build.lock
