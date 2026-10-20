@@ -14,7 +14,7 @@ Nota: Las pruebas estarán disponibles bajo pedido, con el compromiso de enviar 
 ### Exams / Tests
 - **Prueba 1** — [Prueba 1](prueba1_3.pdf)
 <!-- - **Prueba 2** — [Prueba 2](prueba2a.pdf) -->
-- **Prueba 3** — [Prueba 3](prueba3.pdf)
+- **Prueba 3** — [Prueba 3](prueba3_3.pdf)
 <!-- - **Prueba 4** — [Prueba 4](prueba4.pdf) -->
 <!-- - **Prueba 3** — [Prueba 3](/courses/2025b/ace/prueba3.pdf) -->
 
@@ -23,6 +23,6 @@ Nota: Las pruebas estarán disponibles bajo pedido, con el compromiso de enviar 
 
 - **Solución Prueba 1** — [por Lesly Alvear](solPrueba1_3.pdf)
 <!-- - **Solución Prueba 2** — [por Marcos Quillupangui](solPrueba2a.pdf) -->
-- **Solución Prueba 3** — [por Jhon Durán](solPrueba3.pdf)
+- **Solución Prueba 3** — [por Jhon Durán](solPrueba3_3.pdf)
 <!-- - **Solución Prueba 4** — [por Anderson Imbaquingo](solPrueba4.pdf) -->
 
