@@ -14,7 +14,7 @@ slug: "news"
 - **July:** We presented our paper, Adaptive Sliding Mode Control for FOPDT Systems via Online Gradient Descent Tuning, at CoDIT 2026. This work introduces an online-tuned sliding-mode controller that automates parameter tuning using gradient descent, significantly improving tracking performance for industrial processes with time delays without relying on fixed tuning rules. [Paper Link](https://ieeexplore.ieee.org/abstract/document/11630768) [Conference Website](https://www.codit2026.com/index.php/accueil)
 
 ## 2025 NEWS 🚀
-
+    
 - **August 27:** Our conference paper: "Improved Amodal Fruit Segmentation via Data Augmentation and Mask RCNN Head Modification" was presented at Agricontrol and published [Paper Link](https://www.sciencedirect.com/science/article/pii/S2405896325025297)
 
 - **August 27:** We participated at Agricontrol. 8th IFAC Conference on Sensing, Control and Automation Technologies for Agriculture.
