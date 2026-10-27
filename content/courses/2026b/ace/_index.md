@@ -20,7 +20,7 @@ Nota: Las pruebas estarán disponibles bajo pedido, con el compromiso de enviar 
 ### Solutions
 #### Las soluciones son cortesía de alumnos voluntarios. Pueden contener errores, revisar con cuidado.
 
-<!-- - **Solución Prueba 1** — [por Lesly Alvear](solPrueba1_3.pdf) -->
+- **Solución Prueba 1** — [por YYY](solPrueba1_3.pdf)
 <!-- - **Solución Prueba 2** — [por Marcos Quillupangui](solPrueba2a.pdf) -->
 <!-- - **Solución Prueba 3** — [por Jhon Durán](solPrueba3_3.pdf) -->
 <!-- - **Solución Prueba 4** — [por Anderson Imbaquingo](solPrueba4.pdf) -->
