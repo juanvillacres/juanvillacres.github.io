@@ -1,6 +1,7 @@
 ---
-title: "Courses"
-summary: "Courses organized by academic period."
+title: Teaching
+description: Courses and academic materials organized by period.
+aliases: ["/teaching/"]
 ---
 
-Select a period:
+Select an academic period to access course descriptions, exams and student-contributed solutions.

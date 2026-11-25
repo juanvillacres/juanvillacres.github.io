@@ -1,0 +1,205 @@
+- title: 'Tree-level yield mapping for nut trees harvested with shake-catch harvesters – Part I: Yield monitoring
+    and volume flow deconvolution'
+  authors: Juan Villacrés, Patrick H. Brown, Yufang Jin, et al.
+  year: 2026
+  venue: Biosystems Engineering, 272, 104591
+  type: Journal
+  topic: Agriculture
+  url: https://doi.org/10.1016/j.biosystemseng.2026.104591
+  featured: true
+- title: 'Tree-level yield mapping for nut trees harvested with shake-catch harvesters, Part II: Uncertainty
+    estimation and tree identification'
+  authors: Juan Villacrés, Patrick H. Brown, Yufang Jin, et al.
+  year: 2026
+  venue: Biosystems Engineering, 273, 104605 (January 2027 issue; online 2026)
+  type: Journal
+  topic: Agriculture
+  url: https://doi.org/10.1016/j.biosystemseng.2026.104605
+  featured: true
+- title: Adaptive Sliding Mode Control for FOPDT Systems via Online Gradient Descent Tuning
+  authors: Villacrés, J., Viscaíno, M., Chávez, D., & Camacho, O.
+  year: 2026
+  venue: CoDIT 2026, 892–896
+  type: Conference
+  topic: Control
+  url: https://doi.org/10.1109/CoDIT70676.2026.11630768
+  featured: true
+- title: Assessment of light environment conditions for reconstruction of multispectral images by conditional
+    adversarial networks
+  authors: Arevalo-Ramirez, T., Menéndez, O., Villacrés, J., Guevara, J., Guamán-Rivera, R., Demarco, R., &
+    Cheein, F. A.
+  year: 2025
+  venue: Biosystems Engineering, 260, 104305
+  type: Journal
+  topic: Perception
+  url: https://www.sciencedirect.com/science/article/abs/pii/S1537511025002417
+  featured: false
+- title: Improved Amodal Fruit Segmentation via Data Augmentation and Mask RCNN Head Modification
+  authors: Liao, T., Villacrés, J., & Vougioukas, S. G.
+  year: 2025
+  venue: IFAC-PapersOnLine, 59(23), 413-418
+  type: Conference
+  topic: Agriculture
+  url: https://www.sciencedirect.com/science/article/pii/S2405896325025297
+  featured: false
+- title: Assessing a multi-camera system to enhance fruit visibility for robotic harvesting in a V-trellised
+    apple orchard
+  authors: Villacrés, J., & Vougioukas, S.
+  year: 2024
+  venue: Computers and Electronics in Agriculture, 224, 109164
+  type: Journal
+  topic: Agriculture
+  url: https://doi.org/10.1016/j.compag.2024.109164
+  featured: true
+- title: Assessment of Triboelectric Nanogenerators for Electric Field Energy Harvesting
+  authors: Menéndez, O., Villacrés, J., Prado, A., Vásconez, J. P., & Auat-Cheein, F.
+  year: 2024
+  venue: Sensors, 24(8), 2507
+  type: Journal
+  topic: Sensing
+  url: https://www.mdpi.com/1424-8220/24/8/2507
+  featured: false
+- title: A Compact Handheld Sensor Package with Sensor Fusion for Comprehensive and Robust 3D Mapping
+  authors: Wei, P., Fu, K., Villacrés, J., Ke, T., Krachenfels, K., Stofer, C. R., ... & Kong, Z.
+  year: 2024
+  venue: Sensors, 24(8), 2494
+  type: Journal
+  topic: Perception
+  url: https://www.mdpi.com/1424-8220/24/8/2494
+  featured: false
+- title: Exploring Plant Phenotyping through Displacement Current Energy Harvesters-Based Self-Powered Active
+    Sensors
+  authors: Menéndez, O., Villacrés, J., & Cheein, F. A.
+  year: 2024
+  venue: In IECON 2024-50th Annual Conference of the IEEE Industrial Electronics Society. IEEE
+  type: Conference
+  topic: Sensing
+  url: https://doi.org/10.1109/IECON55916.2024.10905108
+  featured: false
+- title: 'Apple orchard production estimation using deep learning strategies: A comparison of tracking-by-detection
+    algorithms'
+  authors: Villacrés, J., Viscaino, M., Delpiano, J., Vougioukas, S., & Cheein, F. A.
+  year: 2023
+  venue: Computers and Electronics in Agriculture, 204, 107513
+  type: Journal
+  topic: Agriculture
+  url: https://www.sciencedirect.com/science/article/pii/S0168169922008213
+  featured: false
+- title: Data Classification Analysis
+  authors: Villacrés, J., & Auat Cheein, F.
+  year: 2023
+  venue: 'In Encyclopedia of Digital Agricultural Technologies (pp. 231-241). Cham: Springer International
+    Publishing'
+  type: Book chapter
+  topic: Perception
+  url: https://link.springer.com/referenceworkentry/10.1007/978-3-031-24861-0_190
+  featured: false
+- title: In-field piecewise regression based prognosis of the IPC in electrically powered agricultural machinery
+  authors: Villacrés, J., & Cheein, F. A.
+  year: 2022
+  venue: Computers and Electronics in Agriculture, 202, 107324
+  type: Journal
+  topic: Agriculture
+  url: https://www.sciencedirect.com/science/article/abs/pii/S0168169922006342
+  featured: false
+- title: Construction of 3D maps of vegetation indices retrieved from UAV multispectral imagery in forested
+    areas
+  authors: Villacrés, J., & Cheein, F. A. A.
+  year: 2022
+  venue: Biosystems Engineering, 213, 76-88
+  type: Journal
+  topic: Perception
+  url: https://www.sciencedirect.com/science/article/abs/pii/S153751102100297X
+  featured: false
+- title: Analyzing the capabilities of electric field energy harvesting using natural leaves
+  authors: Menéndez, O., Villacrés, J., Rivera, R. G., & Cheein, F. A.
+  year: 2021
+  venue: IEEE Access, 9, 158852-158861
+  type: Journal
+  topic: Sensing
+  url: https://ieeexplore.ieee.org/abstract/document/9625723
+  featured: false
+- title: Assessment of multispectral vegetation features for digital terrain modeling in forested regions
+  authors: Arevalo-Ramirez, T., Guevara, J., Rivera, R. G., Villacrés, J., Menéndez, O., Fuentes, A., & Cheein,
+    F. A.
+  year: 2021
+  venue: IEEE Transactions on Geoscience and Remote Sensing, 60, 1-9
+  type: Journal
+  topic: Perception
+  url: https://ieeexplore.ieee.org/abstract/document/9537916
+  featured: false
+- title: 'Retrieval of vegetation indices related to leaf water content from a single index: A case study of
+    Eucalyptus globulus (Labill.) and Pinus radiata (D. Don.)'
+  authors: Villacrés, J., Fuentes, A., Reszka, P., & Cheein, F. A.
+  year: 2021
+  venue: Plants, 10(4), 697
+  type: Journal
+  topic: Perception
+  url: https://www.mdpi.com/2223-7747/10/4/697
+  featured: false
+- title: 3D Printing Deformation Estimation Using Artificial Vision Strategies for Smart-Construction
+  authors: Villacrés, J., Guamán, R., Menéndez, O., & Cheein, F. A.
+  year: 2021
+  venue: In IECON 2021–47th Annual Conference of the IEEE Industrial Electronics Society (pp. 1-6). IEEE
+  type: Conference
+  topic: Perception
+  url: https://ieeexplore.ieee.org/abstract/document/9589770
+  featured: false
+- title: 'Detection and characterization of cherries: A deep learning usability case study in Chile'
+  authors: Villacrés, J. F., & Auat Cheein, F.
+  year: 2020
+  venue: Agronomy, 10(6), 835
+  type: Journal
+  topic: Agriculture
+  url: https://www.mdpi.com/2073-4395/10/6/835
+  featured: false
+- title: Moisture content estimation of Pinus radiata and Eucalyptus globulus from reconstructed leaf reflectance
+    in the SWIR region
+  authors: Arevalo-Ramirez, T., Villacrés, J., Fuentes, A., Reszka, P., & Auat Cheein, F. A. A.
+  year: 2020
+  venue: Biosystems Engineering, 193, 187-205
+  type: Journal
+  topic: Perception
+  url: https://www.sciencedirect.com/science/article/abs/pii/S1537511020300672
+  featured: false
+- title: Foliar moisture content from the spectral signature for wildfire risk assessments in Valparaíso-Chile
+  authors: Villacrés, J., Arevalo-Ramirez, T., Fuentes, A., Reszka, P., & Auat Cheein, F.
+  year: 2019
+  venue: Sensors, 19(24), 5475
+  type: Journal
+  topic: Perception
+  url: https://www.mdpi.com/1424-8220/19/24/5475
+  featured: false
+- title: 'A fuzzy sliding mode controller from a reduced order model: A mobile robot experimental application'
+  authors: Villacrés, J., Herrera, M., Sotomayor, N., & Camacho, O.
+  year: 2017
+  venue: In 2017 4th International Conference on Control, Decision and Information Technologies (CoDIT) (pp.
+    0674-0678). IEEE
+  type: Conference
+  topic: Control
+  url: https://ieeexplore.ieee.org/abstract/document/8102672
+  featured: false
+- title: 'Controllers comparison to stabilize a two-wheeled inverted pendulum: PID, LQR and sliding mode control'
+  authors: Villacrés, J., Viscaino, M., Herrera, M., & Camacho, O.
+  year: 2016
+  venue: International Journal of Control Systems and Robotics, 1, 29-36
+  type: Journal
+  topic: Control
+  url: https://www.iaras.org/iaras/filedownloads/ijcsr/2016/011-0004.pdf
+  featured: false
+- title: Real-time implementation of different controllers for a two-wheeled inverted pendulum
+  authors: Villacrés, J., Viscaíno, M., Herrera, M., & Camacho, O.
+  year: 2016
+  venue: International Journal of Circuits, Systems and Signal Processing, 10, 281-290
+  type: Journal
+  topic: Control
+  url: https://www.naun.org/main/NAUN/circuitssystemssignal/2016/a722005-300.pdf
+  featured: false
+- title: 'Two-wheeled inverted pendulum path planning: An experimental validation'
+  authors: Villacrés, J., Viscaíno, M., Herrera, M., Camacho, O., & Chávez, D.
+  year: 2016
+  venue: In 2016 IEEE Ecuador Technical Chapters Meeting (ETCM) (pp. 1-6). IEEE
+  type: Conference
+  topic: Control
+  url: https://ieeexplore.ieee.org/abstract/document/7750840
+  featured: false

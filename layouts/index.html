@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="shell academic-home">
+  {{ partial "hero.html" . }}
+  <div class="home-content">
+    <section class="home-intro" aria-labelledby="intro-title">
+      <p class="eyebrow">Research & teaching</p>
+      <h1 id="intro-title">{{ site.Data.profile.headlineLead }} <span class="accent">{{ site.Data.profile.headlineAccent }}</span></h1>
+      <p class="intro-bio">{{ site.Data.profile.bio }}</p>
+      <div class="intro-links"><a href="{{ "papers/" | relURL }}">Browse publications <span aria-hidden="true">→</span></a><a href="{{ "contact/" | relURL }}">Get in touch <span aria-hidden="true">→</span></a></div>
+    </section>
+    <section class="home-section" id="research">{{ partial "section-heading.html" (dict "title" "Research interests" "url" "research/" "linkText" "Research overview") }}{{ partial "research.html" . }}</section>
+    <section class="home-section" id="publications">{{ partial "section-heading.html" (dict "title" "Selected publications" "url" "papers/" "linkText" "All publications") }}{{ partial "publications.html" (dict "featured" true) }}</section>
+    <section class="home-section" id="news">{{ partial "section-heading.html" (dict "title" "Recent updates" "url" "posts/" "linkText" "All news") }}{{ partial "news.html" . }}</section>
+    <section class="home-section" id="projects">{{ partial "section-heading.html" (dict "title" "Research projects" "url" "projects/" "linkText" "All projects") }}{{ partial "projects.html" . }}</section>
+    <section class="home-section" id="teaching">{{ partial "section-heading.html" (dict "title" "Teaching" "description" "Course materials, exams and student-contributed solutions." "url" "courses/" "linkText" "All courses") }}{{ partial "teaching.html" . }}</section>
+  </div>
+</div>
+{{ end }}

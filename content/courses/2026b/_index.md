@@ -1,6 +1,6 @@
 ---
 title: "2026B"
-weight: 20251
+weight: 1
 ---
 
-Courses for period 2025B.
+Courses for period 2026B.

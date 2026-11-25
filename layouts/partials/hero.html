@@ -1,0 +1,13 @@
+{{ $p := site.Data.profile }}
+<aside class="profile-rail" aria-label="Academic profile">
+  <div class="profile-identity">
+    {{ with resources.Get "images/portrait.webp" }}<img class="profile-photo" src="{{ .RelPermalink }}" alt="Portrait of {{ $p.name }}" width="{{ .Width }}" height="{{ .Height }}" decoding="async" fetchpriority="high">{{ end }}
+    <div class="profile-details"><p class="profile-name">{{ $p.name }}</p><p class="profile-role">{{ $p.role }}</p><p class="profile-affiliation">{{ $p.affiliation }}</p><p class="profile-location">{{ $p.location }}</p></div>
+  </div>
+  <nav class="profile-social" aria-label="Academic and social profiles">{{ partial "social-links.html" . }}</nav>
+  <section class="profile-experience" aria-labelledby="profile-experience-title">
+    <h2 id="profile-experience-title">Experience</h2>
+    {{ range site.Data.experience }}<div class="profile-appointment"><p class="appointment-role">{{ .role }}</p><p>{{ .organization }}</p><p class="appointment-date">{{ .period }}</p></div>{{ end }}
+    <a class="text-link" href="{{ "experience/" | relURL }}">Experience & expertise <span aria-hidden="true">→</span></a>
+  </section>
+</aside>

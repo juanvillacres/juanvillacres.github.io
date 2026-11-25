@@ -1,115 +1,121 @@
-# Minimalist Hugo Template for Academic Websites
+# Juan Villacrés · Research portfolio
 
-This repository contains a [Hugo](https://github.com/gohugoio/hugo) template to create a personal academic website. The template uses the [PaperMod theme](https://github.com/adityatelange/hugo-PaperMod) but modifies it in various ways to be more minimalist and better suited for academic websites. The website is hosted on [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages).
+An original Hugo website with a neutral grey/blue visual system, a compact academic profile sidebar, editorial research lists, grouped publications, and progressive enhancement. No theme submodule, package manager, external JavaScript or third-party font download is required. Existing teaching resources remain available at their original paths.
 
-## Documentation
+## Quick start (macOS)
 
-The template is documented at https://pascalmichaillat.org/b/.
+Install Hugo Extended and confirm the version:
 
-## Illustration
-
-The website produced by the template can be viewed at https://pascalmichaillat.org/hugo-website/.
-
-## Installation
-
-### On your local machine
-
-- Install [Hugo](https://gohugo.io/installation/). On a Mac, this can be done with [Homebrew](https://brew.sh): run `brew install hugo` in the terminal. If you already have Hugo but it is outdated, run `brew upgrade hugo`.
-- Since the website is hosted on GitHub Pages, it is convenient to install [GitHub Desktop](https://desktop.github.com). The website can be updated from your local machine via GitHub Desktop without going to GitHub.
-- Clone the template repository to your local machine. This can be done in two steps:
-  - Click "Use this template" and then "Create a new repository" at the top of the repository.
-  - Once the new repository is created on your GitHub account, open GitHub Desktop and click "File" and then "Clone repository". Find the newly created repository under the "GitHub.com" tab and clone it.
-- Update the `baseURL` parameter in `config.yml` with the website URL that you plan to use. By default the URL is `https://username.github.io`.
-
-### On your GitHub account
-
-- The first time that you push your repository to GitHub, you need to allow GitHub Actions and GitHub Pages so the website can be built and deployed to GitHub Pages.
-- The first step is to [ask GitHub to publish the website with a GitHub Action](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). GitHub offers a ready-made action to publish a Hugo website, called `Deploy Hugo site to Pages`. This action must be enabled in the [Pages Settings](https://github.com/pmichaillat/hugo-website/settings/pages) of your GitHub repository. You can view the workflow triggered by the action in the `.github/workflows/hugo.yml` file.
-- Once the GitHub Actions are enabled, GitHub will build and publish the website as soon as the repository is updated.
-- If you would like to update the deployment action (for instance because it became outdated and fails to deploy the site), you can find the [most recent action on GitHub](https://github.com/actions/starter-workflows/blob/main/pages/hugo.yml). You can place this file directly in the `.github/workflows` folder to replace the old `hugo.yml` file—but make sure to set `push: branches` to `["main"]`.
-
-## Usage
-
-### Local development
-
-Navigate to the website directory (`cd`) and run in the terminal:
-
-```bash
-hugo server
+```sh
+brew install hugo
+hugo version
 ```
 
-The command builds the website on your machine and makes it available at http://localhost:1313, rebuilding automatically as you edit. You can modify the content of the repository and develop your website entirely on your machine.
+The project targets Hugo Extended 0.125+; the deployment workflow pins 0.147.2, the version in the uploaded project's previous workflow. Use that version if you want exact parity with deployment. Compatibility with every intervening release has not been verified.
 
-### Online deployment
+From this repository root:
 
-Once your website is ready to be made public, commit your content and template changes and push them to the website repository on GitHub. It is convenient to use GitHub Desktop for this Git operation.
+```sh
+hugo server --disableFastRender
+```
 
-On each push, the [GitHub Actions workflow](https://github.com/pmichaillat/hugo-website/actions/workflows/hugo.yml) invokes Hugo to generate the website and deploys the output to [GitHub Pages](https://github.com/pmichaillat/hugo-website/deployments/github-pages). During the workflow, Hugo processes your content, templates, and other project files and generates a static website.
+Open `http://localhost:1313/`. The server reloads whenever source files change. Use `hugo server -D` only when you intentionally want to preview drafts.
 
-## Performance
+## Production build and validation
 
-The website performs well on mobile and desktop devices. Here is an overview of the mobile performance from [PageSpeed Insights](https://pagespeed.web.dev/):
+```sh
+hugo --gc --minify --cleanDestinationDir
+python3 scripts/legacy_routes.py public
+python3 scripts/check_site.py public
+```
 
-<img width="470" alt="mobile" src="https://github.com/pmichaillat/hugo-website/assets/85443660/1488df3e-19bb-4f9f-8a86-11f361414d92">
+`public/` is disposable output, not the source. If you are upgrading an existing checkout, remove its old generated `public/` directory before building to ensure retired pages are not left behind. The checker verifies generated internal links (including fragments and static assets), key routes, basic HTML metadata and teaching PDF bytes. The uppercase legacy redirects are generated only on a case-sensitive filesystem (as in GitHub Actions); on default macOS filesystems the equivalent paths resolve without duplicates.
 
-And here is an overview of the desktop performance:
+## Edit your website
 
-<img width="453" alt="desktop" src="https://github.com/pmichaillat/pmichaillat.github.io/assets/85443660/eff134d2-6097-4bc2-bfd7-4f5c18571789">
+| File | What to update |
+|---|---|
+| `data/profile.yaml` | Name, headline, affiliation, location, email and social links |
+| `data/research.yaml` | Research themes and their corresponding publication topics |
+| `data/experience.yaml` | Academic/professional appointments |
+| `data/skills.yaml` | Research methods and technical expertise |
+| `data/publications.yaml` | Publications, authors, venue, year, topic and featured flag |
+| `data/projects.yaml` | Project entries, tags, paper links and optional GitHub/demo URLs |
+| `content/projects/` | Detailed case studies |
+| `content/posts/` | News and research writing |
+| `content/courses/` | Academic periods and course descriptions |
+| `static/courses/` | Teaching PDFs (match their course directory) |
+| `assets/images/portrait.webp` | Optimized profile portrait |
+| `static/picture.jpeg` | Original portrait and social sharing image |
+| `assets/css/tokens.css` | Light and dark palette, typography and design tokens |
+| `hugo.yaml` | Site metadata, menu and Hugo configuration |
 
-## Software
+The archive section and unused template routes have been removed. Older course PDFs and their historical links are deliberately preserved.
 
-- The website is built with Hugo v0.147.2 via GitHub Actions.
-- The website was developed locally with Hugo v0.147.2 on macOS Sequoia.
-- The website was tested on the following browsers:
-  - Safari 18.4 on macOS Sequoia
-  - Mobile Safari on iOS 18
-- Other Hugo versions, operating systems, and web browsers may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/hugo-website/issues) to help improve compatibility.
+The site uses the operating-system font stack with Inter and JetBrains Mono as preferred locally installed fonts. This avoids external font requests. The portrait is served in WebP on the homepage; the original JPEG is retained for old links and sharing metadata.
 
-## License
+### Add publications
 
-This repository is licensed under the [MIT License](LICENSE.md).
+Copy an existing entry in `data/publications.yaml`. The expected fields are `title`, `authors`, `year` (integer), `venue`, `type` (`Journal`, `Conference`, or `Book chapter`), `topic` (`Control`, `Perception`, `Agriculture`, or `Sensing`), `url` and `featured` (boolean). Publications are automatically sorted and grouped by year. Set `featured: false` for items not shown on the homepage. The publication filter and count are generated from this data, not hard-coded. Year, type and topic filter options are derived from the data automatically. Add a research theme if appropriate. The copy button copies a plain-text citation; verify incomplete author lists and bibliographic details before citing formally.
 
-## Real-world implementations
+### Add a case study
 
-- [Pascal Michaillat's website](https://pascalmichaillat.org/) ([source code](https://github.com/pmichaillat/pmichaillat.github.io))
-- [Rosa van den Ende's website](https://rosavandenende.github.io) ([source code](https://github.com/rosavandenende/rosavandenende.github.io))
-- [Samia Kabir's website](https://samiakabir.com) ([source code](https://github.com/SamiaKabir/samiakabir.github.io))
-- [Dylan Laplace Mermoud's website](https://dylanlaplacemermoud.github.io) ([source code](https://github.com/DylanLaplaceMermoud/dylanlaplacemermoud.github.io))
-- [Maarten Goos's website](https://maartengoos.com) ([source code](https://github.com/MaartenGoos/website))
-- [Jun Wong's website](https://junwong.org) ([source code](https://github.com/junwong97/junwong97.github.io))
-- [Erling Rennemo Jellum's website](https://erlingrj.github.io) ([source code](https://github.com/erlingrj/erlingrj.github.io))
-- [Yangkeun Yun's website](https://yangkeunyun.github.io) ([source code](https://github.com/yangkeunyun/yangkeunyun.github.io))
-- [Lucas Warwar's website](https://lucaswarwar.github.io) ([source code](https://github.com/lucaswarwar/lucaswarwar.github.io))
-- [Franz Louis Cesista's website](https://leloykun.github.io) ([source code](https://github.com/leloykun/leloykun.github.io))
-- [Gabe Sekeres's website](https://gabesekeres.com) ([source code](https://github.com/gsekeres/hugo_site))
-- [Kevin Roice's website](https://kevroi.github.io) ([source code](https://github.com/kevroi/kevroi.github.io))
-- [Daniel Barbosa's website](https://dacbarbosa.github.io) ([source code](https://github.com/dacbarbosa/dacbarbosa.github.io))
-- [Wei Zhang's website](https://weizhang-econ.github.io) ([source code](https://github.com/weizhang-econ/weizhang-econ.github.io))
-- [Ben Hermann's website](http://benhermann.eu) ([source code](https://github.com/bhermann/bhermann.github.io))
-- [Franco Corona's website](http://fcorona.me) ([source code](https://github.com/exibios/exibios.github.io))
-- [Tom George's website](https://tomge.org) ([source code](https://github.com/TomGeorge1234/TomGeorge1234.github.io))
-- [Yucheng Zhou's website](https://yuchengzhou.com) ([source code](https://github.com/YuchengZ-Fin/YuchengZ-Fin.github.io))
-- [Rui Sousa's website](https://ruiagmsousa.github.io) ([source code](https://github.com/ruiagmsousa/ruiagmsousa.github.io))
-- [Stefano Sangiovanni's website](https://ste-sangiovanni.github.io) ([source code](https://github.com/ste-sangiovanni/ste-sangiovanni.github.io))
-- [Seth Watts's website](https://www.sethbwatts.com) ([source code](https://github.com/sBwatts/hugo-website))
-- [Louise Demoor's website](https://louisedemoor.github.io/website/) ([source code](https://github.com/louisedemoor/website))
-- [Giwon Bahg's website](https://giwonbahg.github.io) ([source code](https://github.com/giwonbahg/giwonbahg.github.io))
-- [Diego Araujo's website](https://daliego.github.io/portfolio-case-studies) ([source code](https://github.com/Daliego/portfolio-case-studies))
-- [Liam Powell's website](https://liampwl.com) ([source code](https://github.com/liampwl/liampwl.github.io))
-- [Anton Lundborg's website](https://www.arlundborg.com) ([source code](https://github.com/ARLundborg/web))
-- [Taeyoung Kim's website](https://tykim.me) ([source code](https://github.com/SangsChicom/tykim.github.io))
-- [Momchil Tomov's website](https://momchiltomov.com)
-- [Arthur Douillard's website](https://arthurdouillard.com)
-- [Benjamin Hattemer's website](https://benjaminhattemer.com)
-- [Kostas Bimpikis's website](https://stanford.edu/~kostasb/)
-- [Qiwei He's website](https://www.qiwei-he.com)
-- [Pierre Bardier's website](https://pierrebard.github.io/pierre-bardier/)
-- [Marek Wiewiórka's website](https://marekwiewiorka.org)
-- [Eran Shmuëli's website](https://eranshmueli.com)
-- [Bo Wang's website](https://bowang.finance)
-- [Muhammed Bulutay's website](https://muhammedbulutay.com)
+```sh
+hugo new content projects/new-case-study.md
+```
 
-## Related resources
+Write the case study in Markdown and change `draft: true` to `draft: false` when ready. Add a corresponding item to `data/projects.yaml` with `slug: new-case-study`, title, summary, year, tags, kind, diagram (`yield`, `control`, or `vision`), and optional verified `paper`, `github`, or `demo` URLs. The template links to the actual Markdown page via Hugo's page lookup. Keep the entry's title and the Markdown title aligned. The diagrams are conceptual illustrations, not experimental plots.
 
-- [latex-cv](https://github.com/pmichaillat/latex-cv) - This LaTeX template produces a minimalist academic CV, which you can post on your website. The CV should be named `cv.pdf` and placed in the `static` folder. It will be accessible from the homepage via a social icon.
-- [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces a minimalist research paper, which you can post on your website. This is the template used to produce the mock papers on the illustrative website: [here](https://pascalmichaillat.org/hugo-website/papers/paper3/paper3.pdf), [here](https://pascalmichaillat.org/hugo-website/papers/paper1/paper1.pdf), and [here](https://pascalmichaillat.org/hugo-website/papers/paper2/paper2.pdf).
+### Add news or blog writing
+
+```sh
+hugo new content posts/new-article.md
+```
+
+Edit the title, date, description, body and optional `dateLabel`; publish by removing `draft: true` or setting it to false. The newest three posts automatically appear on the homepage. Use `dateLabel` when only a month or date range is known.
+
+For an optional thumbnail on `/posts/`, place a photo in `static/images/news/` and add these fields to the post's existing YAML front matter:
+
+```yaml
+image: images/news/my-photo.jpg
+imageAlt: Descriptive alternative text for the photograph.
+```
+
+Use paths relative to `static/` (do not include `static/` in the URL). A 3:2 landscape image, ideally around 960 × 640 pixels, works best; other aspect ratios are cropped to fit the thumbnail. Use compressed WebP or JPEG for photographs. If `image` is omitted or empty, no image or reserved image space is rendered. `imageAlt` may be empty for a purely decorative image. Thumbnails appear on the news index only; use Markdown image syntax inside the article body to display a full-size photo there. The semiconductor manufacturing training post includes a red SVG explicitly labeled “Sample image” for demonstration; replace its `image` and `imageAlt` when a real photograph is ready.
+
+
+### Add a course
+
+Create `content/courses/<period>/_index.md` and `content/courses/<period>/<course>/_index.md`. Each needs a title in YAML front matter. Use a smaller `weight` on the newest period to show it first. Place PDFs in `static/courses/<period>/<course>/` and link to them using relative Markdown links. Keep existing PDF names and paths to avoid breaking student bookmarks. When a course is primarily Spanish, use `languageCode: es` in front matter.
+
+## Replace your existing GitHub repository safely
+
+Read `MIGRATION.md` before merging. Extract this ZIP outside the current checkout. In the existing repository, first back up any local changes and commit the current source (if needed); then create a branch:
+
+```sh
+git status
+git switch -c redesign
+```
+
+From the existing repository root, set `NEW` to the extracted replacement directory. Dry-run the synchronization first. The trailing slash copies the new repository's contents, not its enclosing directory. It excludes the existing `.git` so commit history survives. `--delete` intentionally removes obsolete PaperMod files, old configuration and old workflows; review the dry-run output carefully before proceeding.
+
+```sh
+NEW="$HOME/Downloads/juanvillacres-portfolio-blue"
+rsync -avn --delete --exclude='.git' --exclude='public/' --exclude='resources/' "$NEW/" ./
+# Only after reviewing the dry run:
+rsync -av --delete --exclude='.git' --exclude='public/' --exclude='resources/' "$NEW/" ./
+```
+
+Build and review locally, then run:
+
+```sh
+git add -A
+git commit -m "Refine academic portfolio with grey and blue editorial layout"
+git push -u origin redesign
+```
+
+Open a pull request into `main`; the workflow builds and validates it. In GitHub **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source. Merge only after the build check succeeds. A push to `main` builds, validates, uploads and deploys the site. No generated files or new Git submodules need to be committed. The existing Pages environment may require approval if you configured deployment protection rules.
+
+## Checks and limitations
+
+See `VALIDATION.md`. This revision was source-checked and its templates, design and JavaScript tested in a Chromium fixture, but a real Hugo build and Lighthouse audit must still be run. No Lighthouse score is claimed. The included CI job gates deployment on the real build and internal-link checks. External publisher links were not exhaustively tested.

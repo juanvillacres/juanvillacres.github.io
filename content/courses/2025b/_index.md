@@ -1,6 +1,6 @@
 ---
 title: "2025B"
-weight: 20251
+weight: 3
 ---
 
 Courses for period 2025B.

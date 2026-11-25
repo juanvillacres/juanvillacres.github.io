@@ -1,0 +1,1 @@
+<div class="research-list">{{ range site.Data.research }}<article class="research-item"><div><h3>{{ .title }}</h3><p>{{ .description }}</p></div><a class="text-link" href="{{ "papers/" | relURL }}?topic={{ .topic | urlquery }}" aria-label="Publications on {{ .title }}">Papers <span aria-hidden="true">→</span></a></article>{{ end }}</div>

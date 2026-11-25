@@ -1,7 +1,6 @@
 ---
 title: "Control Inteligente (Intelligent Control)"
 description: "Introducción a la Inteligencia Artificial y sus aplicaciones en el modelado y control de procesos industriales. | Introduction to Artificial Intelligence and its applications in industrial process modeling and control."
-hideMeta: true
 ---
 
 Description:

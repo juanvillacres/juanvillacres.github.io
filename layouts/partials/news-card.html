@@ -1,0 +1,11 @@
+<article class="entry-card news-card{{ with .Params.image }} news-card--with-image{{ end }}">
+  <div class="news-card-copy">
+    <p class="mono muted">{{ .Params.datelabel | default (.Date.Format "January 2006") }}</p>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ with .Description }}<p>{{ . | truncate 220 }}</p>{{ end }}
+    <a class="text-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">Read more <span aria-hidden="true">↗</span></a>
+  </div>
+  {{ with .Params.image }}
+    <img class="news-thumbnail" src="{{ . | relURL }}" alt="{{ $.Params.imagealt | default "" }}" width="960" height="640" loading="lazy" decoding="async">
+  {{ end }}
+</article>

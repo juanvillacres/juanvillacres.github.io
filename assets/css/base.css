@@ -1,0 +1,24 @@
+*,*::before,*::after {box-sizing:border-box}
+html {scroll-behavior:smooth;scroll-padding-top:85px}
+body {margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--font);-webkit-font-smoothing:antialiased}
+a {color:var(--accent);text-underline-offset:.2em}
+a:hover {color:var(--accent-hover)}
+button,input,select {font:inherit;color:inherit}
+button {cursor:pointer}
+img,svg {display:block;max-width:100%}
+img {height:auto}
+h1,h2,h3,p,figure {margin:0;overflow-wrap:anywhere}
+h1,h2,h3 {line-height:1.24;letter-spacing:-.025em;font-weight:650}
+h1 {font-size:clamp(2rem,4vw,2.85rem)}
+h2 {font-size:1.55rem}
+h3 {font-size:1.08rem}
+ul {padding-left:1.3em}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible {outline:3px solid var(--accent);outline-offset:3px}
+main:focus {outline:none}
+[hidden] {display:none!important}
+.muted {color:var(--muted)} .accent {color:var(--accent)}
+.mono,.eyebrow {font-family:var(--mono);font-size:.76rem;line-height:1.5}
+.eyebrow {color:var(--muted);letter-spacing:.075em;text-transform:uppercase}
+.sr-only,.skip-link:not(:focus) {position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;clip-path:inset(50%);border:0}
+.skip-link:focus {position:fixed;z-index:100;top:8px;left:8px;padding:10px 16px;background:var(--surface);color:var(--accent)}
+@media(prefers-reduced-motion:reduce) {*,*::before,*::after {scroll-behavior:auto!important;transition:none!important;animation:none!important}}

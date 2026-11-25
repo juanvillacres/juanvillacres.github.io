@@ -1,0 +1,20 @@
+{{ $all := sort site.Data.publications "year" "desc" }}
+{{ if .featured }}
+<div class="publication-list featured-list">{{ range where $all "featured" true }}{{ partial "publication-item.html" (dict "pub" . "featured" true) }}{{ end }}</div>
+<p class="sr-only" id="copy-status" role="status"></p>
+{{ else }}
+{{ $years := slice }}{{ $types := slice }}{{ $topics := slice }}
+{{ range $all }}{{ $years = $years | append .year }}{{ $types = $types | append .type }}{{ $topics = $topics | append .topic }}{{ end }}
+<div class="filters" id="publication-filters" hidden>
+  <div class="filter-search"><label for="pub-search">Search publications</label><input id="pub-search" type="search" placeholder="Title, author or keyword"></div>
+  <div><label for="pub-year">Year</label><select id="pub-year"><option value="">All years</option>{{ range uniq $years }}<option value="{{ . }}">{{ . }}</option>{{ end }}</select></div>
+  <div><label for="pub-type">Type</label><select id="pub-type"><option value="">All types</option>{{ range sort (uniq $types) }}<option>{{ . }}</option>{{ end }}</select></div>
+  <div><label for="pub-topic">Topic</label><select id="pub-topic"><option value="">All topics</option>{{ range sort (uniq $topics) }}<option>{{ . }}</option>{{ end }}</select></div>
+  <button class="button secondary" id="pub-reset" type="button">Reset</button>
+</div>
+<p id="publication-count" class="muted mono" role="status">{{ len $all }} publications</p>
+<div class="publication-list grouped-publications" id="publication-list">
+{{ range $year := uniq $years }}<section class="publication-group" aria-labelledby="papers-{{ $year }}"><h2 class="publication-group-title" id="papers-{{ $year }}">{{ $year }}</h2><div class="publication-group-items">{{ range where $all "year" $year }}{{ partial "publication-item.html" (dict "pub" . "featured" false) }}{{ end }}</div></section>{{ end }}
+</div>
+<p class="empty-state" id="pub-empty" hidden>No publications match these filters.</p><p class="sr-only" id="copy-status" role="status"></p>
+{{ end }}

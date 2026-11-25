@@ -1,0 +1,33 @@
+- title: Tree-level yield mapping
+  slug: tree-level-yield-mapping
+  year: 2026
+  summary: Recovering individual tree yields from overlapping harvest flows and quantifying measurement uncertainty.
+  tags:
+  - Signal processing
+  - Sensor fusion
+  - Uncertainty
+  paper: https://doi.org/10.1016/j.biosystemseng.2026.104591
+  kind: Agricultural sensing
+  diagram: yield
+- title: Adaptive sliding mode control
+  slug: adaptive-sliding-mode-control
+  year: 2026
+  summary: Online gradient-based parameter tuning for tracking in industrial processes with dead time.
+  tags:
+  - FOPDT
+  - Sliding mode control
+  - Gradient descent
+  paper: https://doi.org/10.1109/CoDIT70676.2026.11630768
+  kind: Intelligent control
+  diagram: control
+- title: Multi-camera orchard perception
+  slug: multi-camera-orchard-perception
+  year: 2024
+  summary: Evaluating camera arrangements to improve fruit visibility under natural orchard occlusion.
+  tags:
+  - RGB-D
+  - Computer vision
+  - Robotic harvesting
+  paper: https://doi.org/10.1016/j.compag.2024.109164
+  kind: Machine perception
+  diagram: vision

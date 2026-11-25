@@ -1,0 +1,82 @@
+.shell {width:min(var(--shell),calc(100% - 36px));margin-inline:auto}
+.site-header {position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--border)}
+.header-inner {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;min-height:64px;padding-block:8px}
+.brand {color:var(--ink);text-decoration:none;font-size:1.02rem;font-weight:650;white-space:nowrap}
+.header-controls {display:flex;gap:5px;margin-left:auto}
+.icon-button {display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--control-border);background:transparent;border-radius:var(--radius);color:var(--ink)}
+.icon-button:hover {color:var(--accent);border-color:var(--accent)}
+.icon-button svg {width:20px;height:20px}
+.site-nav {display:flex;flex-wrap:wrap;gap:4px 15px;flex-basis:100%}
+.site-nav a {display:flex;align-items:center;min-height:40px;color:var(--muted);font-size:.88rem;text-decoration:none;font-weight:550}
+.site-nav a:hover,.site-nav a.active {color:var(--accent)}
+.site-nav a.active {text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:7px}
+.js .site-nav:not(.open) {display:none}
+.js .site-nav.open {display:flex;flex-direction:column;align-items:flex-start}
+.academic-home {display:grid;gap:28px;padding-block:32px 66px;align-items:start}
+.profile-rail {min-width:0;border-bottom:1px solid var(--border);padding-bottom:24px}
+.profile-identity {display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;align-items:center}
+.profile-photo {width:100%;aspect-ratio:1;object-fit:cover;object-position:center 37%;border-radius:10px;background:var(--surface-2)}
+.profile-name {font-size:1.4rem;line-height:1.2;font-weight:700;letter-spacing:-.035em;margin-bottom:6px}
+.profile-role,.profile-affiliation,.profile-location {font-size:.87rem;color:var(--muted);line-height:1.45}
+.profile-affiliation {color:var(--ink);margin-top:3px}
+.profile-location {margin-top:5px}
+.profile-social {display:flex;flex-wrap:wrap;gap:3px 15px;margin-top:15px}
+.profile-social a {font-size:.87rem;text-decoration:none;display:inline-flex;gap:5px;align-items:center;min-height:32px}
+.profile-social a:hover {text-decoration:underline}
+.profile-experience {border-top:1px solid var(--border);margin-top:14px;padding-top:15px}
+.profile-experience h2 {font-size:1rem;margin-bottom:10px}
+.profile-appointment {font-size:.86rem;color:var(--muted);line-height:1.5;margin:0 0 10px}
+.profile-appointment .appointment-role {font-weight:650;color:var(--ink)}
+.appointment-date {font-size:.78rem;margin-top:3px}
+.profile-experience .text-link {font-size:.81rem}
+.home-content {min-width:0}
+.home-intro {padding:3px 0 28px}
+.home-intro h1 {margin:9px 0 16px;max-width:750px;font-size:clamp(2rem,4.2vw,2.85rem);letter-spacing:-.045em}
+.intro-bio {font-size:1.07rem;max-width:660px;line-height:1.75;color:var(--muted)}
+.intro-links {display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:16px}
+.intro-links a {font-size:.9rem;font-weight:600;text-decoration:none;min-height:32px;display:inline-flex;align-items:center;gap:7px}
+.intro-links a:hover {text-decoration:underline}
+.home-section {border-top:1px solid var(--border);padding:27px 0 30px}
+.section-heading {display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 18px;margin-bottom:15px}
+.section-heading h2 {font-size:1.5rem}
+.section-heading p {font-size:.93rem;color:var(--muted);margin-top:6px}
+.inner-page {padding-block:28px 65px;min-height:70vh;max-width:940px}
+.page-heading {max-width:780px;margin:27px 0 23px}
+.page-heading h1 {margin:7px 0 12px}
+.page-heading>p:not(.eyebrow) {color:var(--muted);font-size:1.05rem}
+.breadcrumb {display:flex;flex-wrap:wrap;gap:7px;color:var(--muted);font-size:.82rem}
+.breadcrumb a {color:var(--muted)}
+.breadcrumb span[aria-current] {color:var(--ink)}
+.subsection {margin-top:36px}.subsection h2 {margin-bottom:15px}
+.return-link {margin-top:26px}
+.site-footer {border-top:1px solid var(--border);padding-block:24px}
+.footer-inner,.footer-links {display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;color:var(--muted)}
+.footer-links a {font-size:.84rem;color:var(--muted)}
+.error-page h1 {margin:14px 0}.error-page .button {margin-top:20px}
+@media(min-width:680px) {
+ .shell {width:min(var(--shell),calc(100% - 64px))}
+ .academic-home {grid-template-columns:190px minmax(0,1fr);gap:32px;padding-top:54px}
+ .profile-rail {border-bottom:0;border-right:1px solid var(--border);padding:0 20px 15px 0}
+ .profile-identity {display:block}
+ .profile-photo {width:142px;margin-bottom:17px}
+ .profile-name {font-size:1.42rem}
+ .profile-social {display:flex;flex-direction:column;align-items:flex-start;gap:0;margin-top:14px}
+ .profile-experience {margin-top:19px;padding-top:19px}
+ .home-intro {padding-bottom:32px}
+}
+@media(min-width:1000px) {
+ .header-inner {flex-wrap:nowrap;gap:20px}
+ .site-nav,.js .site-nav:not(.open),.js .site-nav.open {display:flex;flex-basis:auto;flex-direction:row;align-items:center;gap:18px;order:1;margin-left:auto}
+ .header-controls {order:2;margin-left:0}
+ .menu-toggle {display:none!important}
+ .academic-home {grid-template-columns:224px minmax(0,1fr);gap:52px;padding-top:64px}
+ .profile-rail {padding-right:28px;position:sticky;top:100px}
+ .profile-photo {width:158px}
+ .home-section {padding-block:31px 33px}
+}
+@media(max-width:679px) {
+ .profile-experience {margin-top:12px;padding-top:12px}
+ .profile-appointment {margin-bottom:3px}
+ .profile-rail {padding-bottom:16px}
+ .academic-home {gap:23px}
+}

@@ -1,6 +1,5 @@
-# Hugo build artifacts
 public/
-resources/
-.DS_Store
-**/.DS_Store
+resources/_gen/
 .hugo_build.lock
+.DS_Store
+__MACOSX/

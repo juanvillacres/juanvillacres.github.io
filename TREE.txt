@@ -1,0 +1,125 @@
+juanvillacres-portfolio-blue/
+├── .github/
+│   └── workflows/
+│       └── hugo.yaml
+├── archetypes/
+│   └── default.md
+├── assets/
+│   ├── css/
+│   │   ├── base.css
+│   │   ├── components.css
+│   │   ├── layout.css
+│   │   └── tokens.css
+│   ├── images/
+│   │   └── portrait.webp
+│   └── js/
+│       └── main.js
+├── content/
+│   ├── courses/
+│   │   ├── 2025b/
+│   │   │   ├── ace/
+│   │   │   │   └── _index.md
+│   │   │   └── _index.md
+│   │   ├── 2026a/
+│   │   │   ├── ace/
+│   │   │   │   └── _index.md
+│   │   │   └── _index.md
+│   │   ├── 2026b/
+│   │   │   ├── ace/
+│   │   │   │   └── _index.md
+│   │   │   ├── controlinteligente/
+│   │   │   │   └── _index.md
+│   │   │   └── _index.md
+│   │   └── _index.md
+│   ├── experience/
+│   │   └── _index.md
+│   ├── papers/
+│   │   └── _index.md
+│   ├── posts/
+│   │   ├── _index.md
+│   │   ├── agricontrol-2025.md
+│   │   ├── codit-2026.md
+│   │   ├── joining-epn.md
+│   │   ├── organizing-agricontrol.md
+│   │   ├── semiconductor-training.md
+│   │   └── yield-mapping-papers.md
+│   ├── projects/
+│   │   ├── _index.md
+│   │   ├── adaptive-sliding-mode-control.md
+│   │   ├── multi-camera-orchard-perception.md
+│   │   └── tree-level-yield-mapping.md
+│   ├── research/
+│   │   └── _index.md
+│   ├── _index.md
+│   └── contact.md
+├── data/
+│   ├── experience.yaml
+│   ├── profile.yaml
+│   ├── projects.yaml
+│   ├── publications.yaml
+│   ├── research.yaml
+│   └── skills.yaml
+├── layouts/
+│   ├── _default/
+│   │   ├── baseof.html
+│   │   ├── list.html
+│   │   └── single.html
+│   ├── partials/
+│   │   ├── breadcrumb.html
+│   │   ├── diagram.html
+│   │   ├── experience.html
+│   │   ├── footer.html
+│   │   ├── head.html
+│   │   ├── header.html
+│   │   ├── hero.html
+│   │   ├── news-card.html
+│   │   ├── news.html
+│   │   ├── projects.html
+│   │   ├── publication-item.html
+│   │   ├── publications.html
+│   │   ├── research.html
+│   │   ├── section-heading.html
+│   │   ├── seo.html
+│   │   ├── skills.html
+│   │   ├── social-links.html
+│   │   └── teaching.html
+│   ├── 404.html
+│   └── index.html
+├── scripts/
+│   ├── check_site.py
+│   └── legacy_routes.py
+├── static/
+│   ├── courses/
+│   │   ├── 2025b/
+│   │   │   └── ace/
+│   │   │       ├── prueba1.pdf
+│   │   │       ├── prueba2a.pdf
+│   │   │       ├── prueba3.pdf
+│   │   │       ├── prueba4.pdf
+│   │   │       ├── solPrueba1.pdf
+│   │   │       ├── solPrueba2a.pdf
+│   │   │       ├── solPrueba3.pdf
+│   │   │       └── solPrueba4.pdf
+│   │   ├── 2026a/
+│   │   │   └── ace/
+│   │   │       ├── prueba1_3.pdf
+│   │   │       ├── prueba3_3.pdf
+│   │   │       ├── solPrueba1_3.pdf
+│   │   │       └── solPrueba3_3.pdf
+│   │   └── 2026b/
+│   │       └── ace/
+│   │           ├── prueba1_3.pdf
+│   │           └── solPrueba1_3.pdf
+│   ├── images/
+│   │   └── news/
+│   │       └── semiconductor-training-demo.svg
+│   ├── apple-touch-icon.png
+│   ├── favicon.svg
+│   └── picture.jpeg
+├── .gitignore
+├── hugo.yaml
+├── LICENSE.md
+├── MIGRATION.md
+├── README.md
+├── TREE.txt
+└── VALIDATION.md

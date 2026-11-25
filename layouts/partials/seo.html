@@ -1,0 +1,25 @@
+{{ $p := site.Data.profile }}
+{{ $title := .Title }}{{ if .IsHome }}{{ $title = printf "%s | Research & teaching" site.Title }}{{ else }}{{ $title = printf "%s | %s" .Title site.Title }}{{ end }}
+{{ $desc := .Description | default (.Summary | plainify | truncate 160) | default site.Params.description }}
+{{ $image := site.Params.socialimage | absURL }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ $p.name }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:type" content="{{ if and .IsPage (eq .Section "posts") }}article{{ else }}website{{ end }}">
+<meta property="og:image" content="{{ $image }}">
+<meta property="og:image:alt" content="Juan Villacrés">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $image }}">
+{{ $social := slice }}{{ range $p.social }}{{ if not (hasPrefix .url "mailto:") }}{{ $social = $social | append .url }}{{ end }}{{ end }}
+{{ $person := dict "@type" "Person" "@id" (printf "%s#person" site.Home.Permalink) "name" $p.name "url" site.Home.Permalink "image" $image "jobTitle" $p.role "affiliation" (dict "@type" "Organization" "name" $p.affiliation) "sameAs" $social }}
+{{ if .IsHome }}<script type="application/ld+json">{{ merge $person (dict "@context" "https://schema.org") | jsonify | safeJS }}</script>{{ else if and .IsSection (eq .Section "papers") }}
+{{ $items := slice }}{{ range $i,$pub := site.Data.publications }}{{ $kind := "ScholarlyArticle" }}{{ if eq $pub.type "Book chapter" }}{{ $kind = "Chapter" }}{{ end }}{{ $items = $items | append (dict "@type" "ListItem" "position" (add $i 1) "item" (dict "@type" $kind "name" $pub.title "url" $pub.url "author" (dict "@id" (printf "%s#person" site.Home.Permalink) "@type" "Person" "name" $p.name))) }}{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "ItemList" "itemListElement" $items | jsonify | safeJS }}</script>
+{{ else if and .IsPage (eq .Section "posts") }}<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "url" .Permalink "description" $desc "author" $person | jsonify | safeJS }}</script>{{ end }}

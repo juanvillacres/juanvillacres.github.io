@@ -1,0 +1,1 @@
+{{ with site.GetPage "/courses" }}<div class="teaching-list">{{ range .Sections.ByWeight }}<article class="teaching-period"><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><ul>{{ range .Sections.ByTitle }}<li><a href="{{ .RelPermalink }}">{{ .Title }} <span aria-hidden="true">→</span></a></li>{{ end }}</ul></article>{{ end }}</div>{{ end }}

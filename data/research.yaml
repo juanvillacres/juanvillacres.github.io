@@ -1,0 +1,9 @@
+- title: Intelligent control
+  description: Adaptive and robust methods for dynamic systems, including industrial processes with time delays.
+  topic: Control
+- title: Machine perception
+  description: Vision, deep learning and spectral sensing for reliable measurements in complex environments.
+  topic: Perception
+- title: Agricultural robotics & sensing
+  description: Field-ready sensing, yield mapping and perception for agricultural automation.
+  topic: Agriculture

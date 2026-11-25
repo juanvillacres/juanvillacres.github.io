@@ -1,11 +1,10 @@
 ---
 title: "Análisis de Circuitos Eléctricos"
-description: ""
-hideMeta: true
+languageCode: es
+description: "Exams and student-contributed solutions."
 ---
 
 Pruebas y soluciones.
-<!--more-->
 
 ## Material
 
@@ -16,7 +15,6 @@ Nota: Las pruebas estarán disponibles bajo pedido, con el compromiso de enviar 
 - **Prueba 2** — [Prueba 2](prueba2a.pdf)
 - **Prueba 3** — [Prueba 3](prueba3.pdf)
 - **Prueba 4** — [Prueba 4](prueba4.pdf)
-<!-- - **Prueba 3** — [Prueba 3](/courses/2025b/ace/prueba3.pdf) -->
 
 ### Solutions
 #### Las soluciones son cortesía de alumnos voluntarios. Pueden contener errores, revisar con cuidado.

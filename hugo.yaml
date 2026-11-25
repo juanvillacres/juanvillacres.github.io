@@ -1,0 +1,33 @@
+baseURL: https://juanvillacres.github.io/
+languageCode: en-us
+defaultContentLanguage: en
+title: Juan Villacrés
+enableRobotsTXT: true
+enableGitInfo: false
+capitalizeListTitles: false
+summaryLength: 24
+params:
+  author: Juan Villacrés
+  description: Research and teaching in intelligent control, machine perception and agricultural automation.
+  socialImage: picture.jpeg
+  themeColor: '#f5f6f8'
+menu:
+  main:
+    - {name: About, pageRef: /, weight: 5}
+    - {name: Research, pageRef: /research, weight: 10}
+    - {name: Publications, pageRef: /papers, weight: 20}
+    - {name: Projects, pageRef: /projects, weight: 30}
+    - {name: Teaching, pageRef: /courses, weight: 40}
+    - {name: News, pageRef: /posts, weight: 50}
+    - {name: Contact, pageRef: /contact, weight: 60}
+disableKinds: [taxonomy, term]
+markup:
+  goldmark:
+    renderer:
+      unsafe: false
+  highlight:
+    noClasses: true
+    style: github
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
